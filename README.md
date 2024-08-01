@@ -16,3 +16,6 @@ Features:
 Copyright:
 
 This is a free software.
+
+This is calculator v2.1.0
+![Calculator_v2 1 0](https://github.com/user-attachments/assets/3bf0d5d1-a67a-4650-a30a-ab4bcd106d80)
