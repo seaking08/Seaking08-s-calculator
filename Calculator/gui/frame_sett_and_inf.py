@@ -41,11 +41,12 @@ def create_setting_frame_widgets():
     max_number_button["menu"] = values
 
 def create_info_frame_widget():
-    info_label = ttk.Label(notebook.info_frame,text="This is calculator version 2.1.0 .\nMade by Seaking08 "
+    info_label = ttk.Label(notebook.info_frame,text="This is calculator version 2.1.1 .\nMade by Seaking08 "
                                            "\n\nNew features in 1.1: info, trigonometric calc, pi\nNew features in 1.2: settings, themes\n"
                                            "New features in 1.2.1: Bug fixed \n(MAX/MIN/STEPS not numbers), added new Pythonfiles [BG]\n"
                                            "New features in 1.3: Solving two functions\n\nNew features in 2.0: New calculation reader [BG],\n"
                                             "better trigonometric (asin, acos, atan; two degree units; \nusable in calc/table)"
                                             "added const e, reworked gui in calc\nNew features in 2.1.0: Added trigonometrical support\n"
                                             "in the solver,pi and e are now 'pi' and 'e' in calc, pi and e \nsupport in table and solver,"
-                                            "sqrt surpport in table").place(x=0,y=0)
+                                            "sqrt surpport in table\nNew features in 2.1.1: Faster 'not known keyword' error \ncatching,"
+                                            " new error names").place(x=0,y=0)
