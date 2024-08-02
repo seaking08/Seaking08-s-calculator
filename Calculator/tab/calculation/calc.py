@@ -23,7 +23,7 @@ def add(n, to_back) -> None:
         if not n == "c":
             add_to_display(calc)
     except ValueError:
-        add_to_display("Error! To large Number for ANS!")
+        add_to_display("ValueError! To large Number for ANS!")
 
 def add_to_display(text):
     try:
@@ -36,7 +36,7 @@ def add_to_display(text):
         frame_calc.display.insert(1.0, text)
         frame_calc.display.config(state="disabled")
     except ValueError:
-        add_to_display("Error! To large Number!")
+        add_to_display("ValueError! To large Number!")
     finally:
         frame_calc.display.config(state="disabled")
 
@@ -45,14 +45,20 @@ def calculate():
     try:
         ans = read_calculation(calc)
         if ans == "SyntaxError": raise SyntaxError
-        add_to_display(ans)
-        add("c", "c")
+        elif ans == "NameError": raise NameError
+        elif ans == "ValueError": raise ValueError
+        else:
+            add_to_display(ans)
+            add("c", "c")
     except ZeroDivisionError:
-        add_to_display("Error! Division by 0 are not allowed!")
+        add_to_display("DivZeroError! Division by 0 are not allowed!")
         add("c", "c")
     except ValueError:
-        add_to_display("Error! To large Number or wrong input!")
+        add_to_display("ValueError! To large Number or wrong input!")
         add("c", "c")
     except SyntaxError:
-        add_to_display("Error! Wrong use of ')'  and '('!")
+        add_to_display("SyntaxError!")
+        add("c", "c")
+    except NameError:
+        add_to_display("NameError! Not known keyword!")
         add("c", "c")
