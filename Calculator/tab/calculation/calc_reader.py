@@ -25,7 +25,8 @@ def read_calculation(calc):
     for i in calc:
         if counter > len(calc):
             break
-        check_keyword_appearance_and_read(calc, i)
+        if check_keyword_appearance_and_read(calc, i) == "Not known keyword":
+            return "NameError"
         counter += 1
 
     return calculate(to_calculate)
